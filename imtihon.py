@@ -95,7 +95,7 @@ dp = Dispatcher()
 @dp.message(F.text == "⬅️ Ortga")
 async def ru_back(message: types.Message):
     await message.answer(
-        "Нажмите на Корзину 🛍, чтобы заказать товары или просмотреть их.\n\n", reply_markup=kb)
+        "Korzinkaga kiring nima qoshganizni korish uchun.\n\n", reply_markup=kb)
 
 
 @dp.message(F.text == "Korzina")
@@ -114,7 +114,7 @@ async def show_basket(message: types.Message):
             response += f"- {title} : {quantity} ta, {price}00 сум\n"
         response += f"Narxi: {round(total_price, 00)}00 сум"
     else:
-        response = "Ваша корзина пока пуста."
+        response = "Sizning Korzinangiz xozircha bosh."
 
     await message.answer(response)
 
@@ -143,14 +143,14 @@ async def show_basket(message: types.Message):
 async def cmd_start(message: types.Message):
     await message.answer_photo(photo=FSInputFile("img_16.png"),
                                caption="Assalomu Aleykum!\n Do'konimizga xush kelibsiz!\n"
-                                       "Iltimos ro'yxatdan o'ting /registration"
+                                       ""
                                        "Dokonimizdsan turli turdagi mahsulotlarni Ayol, Erkak va Bolalr kiyimini sotib olsangiz boladi\n"
                                        "Hozirda dokonimizda turli Aksiyalar bolib otyapti", reply_markup=kb)
 
 
 @dp.message(F.text.in_(['Kiyimlar🥻']))
 async def cmd_products(message: types.Message):
-    await message.answer("Mahsulotlarni boshqarish!", reply_markup=kym_turi)
+    await message.answer("Mahsulotlarni boshqarish kerakli Menuni tanlang!", reply_markup=kym_turi)
 
 
 @dp.message(F.text == 'Aksessuar')

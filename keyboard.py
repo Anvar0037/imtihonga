@@ -7,7 +7,7 @@ ikb = InlineKeyboardMarkup(inline_keyboard=[
 
 kb = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text='Kiyimlar🥻'),
-     KeyboardButton(text='Aksessuar'),
+     KeyboardButton(text=''),
      KeyboardButton(text='Korzina'),
      KeyboardButton(text='Sotib Olganlarim')]
 ], resize_keyboard=True)
